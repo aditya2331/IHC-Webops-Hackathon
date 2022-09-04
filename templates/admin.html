@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block main %}
+<div style="font-size: 27px; margin-left: 20px;">
+    Welcome, <span style="color: rgb(50, 114, 85); font-size: 35px;">admin</span>.
+</div>
+<hr>
+
+<h2 style="padding: 20px;">
+All complaints
+<a style="margin-left: 10px;" role="button" href="/complaint" class="btn btn-success">Add a complaint</a>
+</h2>
+<div style="padding: 0px 50px;">
+    <table class="table table-striped" style="font-size: large;">
+        <thead>
+            <tr>
+                <th class="text-start">User ID</th>
+                <th class="text-start">Date</th>
+                <th class="text-start">Hostel</th>
+                <th class="text-end">Type</th>
+                <th class="text-end">Roll Number</th>
+                <th class="text-end">Mobile Number</th>
+                <th class="text-end">Complaint</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for complaint in allcomplaints %}
+            <tr>
+                <th class="text-start">{{ complaint[0] }}</th>
+                <td class="text-start">{{ complaint[4] }}</td>
+                <td class="text-start">{{ complaint[1] }}</td>
+                <td class="text-end">{{ complaint[3] }}</td>
+                <td class="text-end">{{ complaint[5] }}</td>
+                <td class="text-end">{{ complaint[6] }}</td>
+                <td class="text-end">{{ complaint[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

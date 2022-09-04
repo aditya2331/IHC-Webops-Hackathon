@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block main %}
+<div style="text-align: center; padding: 50px;">
+    <div style="font-size: 50px; text-align: center; margin-top: 200px;">
+        Successfully submitted complaint.
+    </div>
+    <div style="margin-top: 20px;">
+        <a style="margin: 10px;" role="button" href="/complaint" class="btn btn-primary">Submit another complaint</a>
+        <a role="button" href="/" class="btn btn-primary">Back to Dashboard</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div style="justify-content: center; display: flex;">
+        <div class="row justify-content-center col-md-5 logincard">
+        <div class="col p-0" style="background-color: #FAF1E6; border-color: #dec8ad; border-style: solid; border-radius: 0px 5px 5px 0px; border-width: 1px;">
+            <div class="card-body text-center" style="margin-top: 50px;">
+            <h1 class="card-title" style="margin-bottom: 30px; color: #d9ba93; font-size: 60px;">Hostel Complaint Portal</h1>
+            <form action="/login" method="post">
+                <div class="mb-3">
+                    <input required autocomplete="off" autofocus class="form-control mx-auto w-50 fs-5" style="border-radius: 15px;" id="username" name="username" placeholder="Username" type="text">
+                </div>
+                <div class="mb-3">
+                    <input required class="form-control mx-auto w-50 fs-5" style="border-radius: 15px;" id="password" name="password" placeholder="Password" type="password">
+                </div>
+                <button class="rate fs-3" type="submit">Log In</button>
+                <div style="margin-top: 10px;">Don't have an account? <a href="/register" style="color: rgb(10, 21, 118);">Register now</a>.</div>
+            </form>
+            </div>
+        </div>
+        </div>
+</div>
+{% endblock %}

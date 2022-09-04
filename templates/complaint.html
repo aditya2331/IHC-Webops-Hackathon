@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block main %}
+<div style="font-size: 27px; margin-left: 20px;">
+    Welcome, user <span style="color: rgb(50, 114, 85); font-size: 35px;">{{ name }}</span>.
+</div>
+<hr>
+<div style="padding: 20px;">
+<form action="/complaint" method="post">
+    <select required class="form-select" aria-label="Choose hostel" id="hostels" name="hostels" style="width: 25%;">
+        <option selected disabled value="">Choose hostel</option>
+        <option value="Hostel 1">Hostel 1</option>
+        <option value="Hostel 2">Hostel 2</option>
+        <option value="Hostel 3">Hostel 3</option>
+        <option value="Hostel 4">Hostel 4</option>
+    </select>
+    <select required class="form-select" aria-label="Type of complaint" id="type" name="type" style="margin: 20px 0px; width: 25%;">
+        <option selected disabled value="">Choose category</option>
+        <option value="Health and Hygiene">Health and Hygiene</option>
+        <option value="Room issues">Room issues</option>
+        <option value="Issues with peers">Issues with peers</option>
+        <option value="Other">Other</option>
+    </select>
+    <input class="form-control" name="rollnum" style="margin: 20px 0px; width: 25%;" type="text" placeholder="Enter roll number (optional)" aria-label="rollnum">
+    <input class="form-control" name="mobnum" style="margin: 20px 0px; width: 25%;" type="text" placeholder="Enter mobile number (optional)" aria-label="mobnum">
+    <div class="input-group" style="margin: 20px 0px;">
+        <textarea class="form-control" name="complaint" style="font-size: 20px;" required placeholder="Write a complaint..."></textarea>
+    </div>
+    <button class="btn btn-secondary" style="border-radius: 3px;" type="submit">Submit complaint</button>
+</form>
+</div>
+{% endblock %}

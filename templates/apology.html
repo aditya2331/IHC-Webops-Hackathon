@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <div class="text-center">
+        <h1>{{ top }}</h1>
+    <!-- https://memegen.link/ -->
+    <img alt="{{ top }}" class="border img-fluid" src="/static/error-icon-32.png" title="{{ top }}">
+    <h1> {{ bottom }}</h1>
+    
+    </div>
+{% endblock %}
